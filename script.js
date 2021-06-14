@@ -7,8 +7,6 @@ const character2 = document.querySelector('.characterName2');
 const character3 = document.querySelector('.characterName3');
 const character4 = document.querySelector('.characterName4');
 
-const maxCharacter = 671;
-
 let arrayCharacterId = [Math.floor(Math.random() * 671), 
     Math.floor(Math.random() * 671), 
     Math.floor(Math.random() * 671), 
