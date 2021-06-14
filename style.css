@@ -1,0 +1,89 @@
+@font-face {
+    font-family: rickAndMortyFont;
+    src: url('./assets/get_schwifty.ttf');
+}
+
+body {
+    align-items: center;
+    background-color: #ffffff;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+    background-image: linear-gradient(
+        180deg,
+        #000000 15%,
+        #272727 50%,
+        #444444 30%,
+        #444444 30%,
+        #272727 50%,
+        #000000 85%
+    );
+    background-attachment:scroll;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    flex: 1 1 300px;
+}
+
+h1 {
+    color: #087937;
+    font-family: 'rickAndMortyFont';
+    font-size: 90px;
+    padding: 50px;
+    margin-top: 0%;
+}
+
+h2 {
+    font-family: 'Pangolin', cursive;
+    font-size: 40px;
+    letter-spacing: 12px;
+    color: #ffffff;
+}
+
+section {
+    align-items: center;
+    background: rgba(228, 226, 226, 0.493);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px 0 #087937;
+    display: flex;
+    flex-direction: column;
+    height: 360px;
+    margin: 40px 60px;
+    padding: 25px;
+    width: 300px;
+}
+
+main > section img {
+    width: 300px;
+    height: 300px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 2px 2px #4d4e4ebd;
+
+}
+
+main > section p {
+    font-family: 'Pangolin', cursive;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin: 20px;
+    display: flex;
+}
+
+a img {
+    margin-top: 150px;
+    width: 60px;
+    height: 40px;
+}
+
+p {
+    color: #ffffff;
+    font-family: 'rickAndMortyFont';
+    font-size: 12px;
+    margin-top: 10px;
+}
