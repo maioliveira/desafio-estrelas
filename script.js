@@ -9,11 +9,13 @@ const character4 = document.querySelector('.characterName4');
 
 const maxCharacter = 671;
 
-let arrayCharacterId = [Math.floor(Math.random() * 671), 
-    Math.floor(Math.random() * 671), 
-    Math.floor(Math.random() * 671), 
-    Math.floor(Math.random() * 671)];
+// Cria uma lista de IDs aleatórios a serem utilizados para acessar os dados da API 
+let arrayCharacterId = [Math.floor(Math.random() * maxCharacter), 
+    Math.floor(Math.random() * maxCharacter), 
+    Math.floor(Math.random() * maxCharacter), 
+    Math.floor(Math.random() * maxCharacter)];
 
+// Acessa a API e pega as informações do personagem 1, de ID especifíco, que serão alteradas na página (image e name) de um ID especifíco 
 function getCharacter1() {
     return fetch(`https://rickandmortyapi.com/api/character/${arrayCharacterId[0]}`, {
         method:'GET',
@@ -24,10 +26,10 @@ function getCharacter1() {
     }).then((response) => response.json()).then((data) => {
         image1.src = data.image;
         character1.innerHTML = data.name;
-
     });
 }
 
+// Acessa a API e pega as informações do personagem 2, de ID especifíco, que serão alteradas na página (image e name) de um ID especifíco 
 function getCharacter2() {
     return fetch(`https://rickandmortyapi.com/api/character/${arrayCharacterId[1]}`, {
         method:'GET',
@@ -41,6 +43,7 @@ function getCharacter2() {
     });
 }
 
+// Acessa a API e pega as informações do personagem 3, de ID especifíco, que serão alteradas na página (image e name) de um ID especifíco 
 function getCharacter3() {
     return fetch(`https://rickandmortyapi.com/api/character/${arrayCharacterId[2]}`, {
         method:'GET',
@@ -55,6 +58,7 @@ function getCharacter3() {
     });
 }
 
+// Acessa a API e pega as informações do personagem 4, de ID especifíco, que serão alteradas na página (image e name) de um ID especifíco 
 function getCharacter4() {
     return fetch(`https://rickandmortyapi.com/api/character/${arrayCharacterId[3]}`, {
         method:'GET',
@@ -73,6 +77,5 @@ window.addEventListener('load', function() {
     getCharacter1(),
     getCharacter2(),
     getCharacter3(),
-    getCharacter4(),
-    console.log('All assets are loaded')
+    getCharacter4()
 });
